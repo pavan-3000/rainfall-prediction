@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        select,
+        input[type="number"],
+        input[type="date"],
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .error {
+            color: red;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Weather Prediction Form</h2>
+    <form action="/predict" method="POST">
+        <div>
+            <label for="location">State/UT Name:</label>
+            <select id="location" name="location" required>
+                <option selected disabled hidden>Select Location</option>
+                <option value="0">ANDAMAN And NICOBAR ISLANDS</option>
+                <option value="2">ARUNACHAL PRADESH</option>
+                <option value="3">ASSAM</option>
+                <option value="22">MEGHALAYA</option>
+                <option value="21">MANIPUR</option>
+                <option value="23">MIZORAM</option>
+                <option value="24">NAGALAND</option>
+                <option value="31">TRIPURA</option>
+                <option value="34">WEST BENGAL</option>
+                <option value="29">SIKKIM</option>
+                <option value="25">ORISSA</option>
+                <option value="15">JHARKHAND</option>
+                <option value="4">BIHAR</option>
+                <option value="32">UTTAR PRADESH</option>
+                <option value="33">UTTARANCHAL</option>
+                <option value="12">HARYANA</option>
+                <option value="5">CHANDIGARH</option>
+                <option value="9">DELHI</option>
+                <option value="27">PUNJAB</option>
+                <option value="13">HIMACHAL</option>
+                <option value="14">JAMMU AND KASHMIR</option>
+                <option value="28">RAJASTHAN</option>
+                <option value="19">MADHYA PRADESH</option>
+                <option value="11">GUJARAT</option>
+                <option value="7">DADAR NAGAR HAVELI</option>
+                <option value="8">DAMAN AND DUI</option>
+                <option value="20">MAHARASHTRA</option>
+                <option value="10">GOA</option>
+                <option value="6">CHATISGARH</option>
+                <option value="1">ANDHRA PRADESH</option>
+                <option value="30">TAMIL NADU</option>
+                <option value="26">PONDICHERRY</option>
+                <option value="16">KARNATAKA</option>
+                <option value="17">KERALA</option>
+                <option value="18">LAKSHADWEEP</option>
+            </select>
+        </div>
+        <div>
+            <label for="mintemp">Min Temperature:</label>
+            <input type="number" step="0.1" id="mintemp" name="mintemp" required>
+        </div>
+        <div>
+            <label for="maxtemp">Max Temperature:</label>
+            <input type="number" step="0.1" id="maxtemp" name="maxtemp" required>
+        </div>
+        <div>
+            <label for="humidity">Humidity:</label>
+            <input type="number" step="0.1" id="humidity" name="humidity" required>
+        </div>
+        <div>
+            <label for="pressure">Pressure:</label>
+            <input type="number" step="0.1" id="pressure" name="pressure" required>
+        </div>
+        <div>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
